@@ -1,0 +1,39 @@
+---
+title: "About the Logomark"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Original
+
+Source: <https://flora-on.pt/#/h2eJ7>.
+
+![](Aster-aragonensis-MPorto.jpg){width="500" alt="Aster aragonensis MPorto"}
+
+The hex logo for this package is a derivative work based on this photograph of an
+_Aster aragonensis_ flower by botanist [Miguel
+Porto](https://github.com/miguel-porto), sourced from
+[Flora-On](https://flora-on.pt/), and is licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License ([CC BY-NC
+4.0](https://creativecommons.org/licenses/by-nc/4.0/)).
+
+## Logomark
+
+Source: <https://www.pattern.institute/eunis.habitats/logo.svg>.
+
+![](https://www.pattern.institute/eunis.habitats/logo.svg){width="500" alt="eunis.habitats logo"}
+
+The logomark is a cropped version of the original photograph, adapted to fit a
+hexagonal shape.
+
+This means you are free to share and adapt the logomark for non-commercial
+purposes as long as you give appropriate credit to the original creator, link to
+the license, and indicate if changes were made. It also implies you cannot use
+the material for commercial purposes, nor can you apply legal terms or
+technological measures that legally restrict others from doing anything the
+license permits.

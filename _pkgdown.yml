@@ -7,8 +7,8 @@ home:
   title: EUNIS Habitat Classification
   description: EUNIS Habitats and crosswalks
   links:
-  - text: EUNIS habitat classification
-    href: https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1/
+  - text: About the logomark
+    href: articles/logo.html
 
 authors:
   Ramiro Magno:
