@@ -41,7 +41,9 @@ The data set `eunis_habitats` provides the four EUNIS classifications:
 3. EUNIS marine classification from 2022
 4. EUNIS terrestrial classification from 2021
 
-See `vignette("eunis-classification")` to learn more.
+See
+[`vignette("eunis-classification")`](https://www.pattern.institute/eunis.habitats/articles/eunis-classification.html)
+to learn more.
 
 ## Crosswalks
 
@@ -51,5 +53,7 @@ Use the helper `crosswalk()` to map habitat codes across classification systems:
 - European Red List of Habitats
 - Habitats Directive Annex I
 
-See `vignette("crosswalks")` for more details.
+See
+[`vignette("crosswalks")`](https://www.pattern.institute/eunis.habitats/articles/crosswalks.html)
+for more details.
 
