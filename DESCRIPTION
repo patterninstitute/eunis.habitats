@@ -1,7 +1,7 @@
 Package: eunis.habitats
 Type: Package
 Title: EUNIS Habitat Classification
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(given = "Ramiro", family = "Magno", email = "rmagno@pattern.institute",
     role = c("aut", "cre"), comment = c(ORCID = "0000-0001-5226-3441")),
