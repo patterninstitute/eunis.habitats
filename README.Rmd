@@ -18,6 +18,7 @@ library(eunis.habitats)
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/eunis.habitats)](https://CRAN.R-project.org/package=eunis.habitats)
+[![R-CMD-check](https://github.com/patterninstitute/eunis.habitats/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/patterninstitute/eunis.habitats/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 `{eunis.habitats}` is an R data package that provides the EUNIS habitat
