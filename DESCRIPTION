@@ -33,3 +33,5 @@ URL: https://github.com/patterninstitute/eunis.habitats, https://www.pattern.ins
 BugReports: https://github.com/patterninstitute/eunis.habitats/issues
 Config/Needs/website: patterninstitute/chic, rmarkdown
 License: CC0
+Suggests: 
+    dplyr
