@@ -16,10 +16,9 @@ authors:
     href: https://www.ccmar.ualg.pt/users/lbentes
   Pattern Institute:
     href: https://www.pattern.institute/
-    html: "<img src='https://rmagno.eu/eunis.habitats/reference/figures/pi-logotype-canonical-whole-v01.svg' height=24>"
   CCMAR:
     href: "https://www.ccmar.ualg.pt/"
-    html: "<img src='https://rmagno.eu/eunis.habitats/reference/figures/ccmar-logotype.svg' height=24>"
+    html: "<img src='https://www.pattern.institute/eunis.habitats/reference/figures/ccmar-logotype.svg' height=24 alt='ccmar'>"
 
 
 reference:
