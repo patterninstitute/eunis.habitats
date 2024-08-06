@@ -13,7 +13,6 @@ Useful links:
 \itemize{
   \item \url{https://github.com/patterninstitute/eunis.habitats}
   \item \url{https://www.pattern.institute/eunis.habitats/}
-  \item \url{http://www.pattern.institute/eunis.habitats/}
   \item Report bugs at \url{https://github.com/patterninstitute/eunis.habitats/issues}
 }
 
