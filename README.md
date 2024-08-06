@@ -21,13 +21,6 @@ Install from CRAN:
 install.packages("eunis.habitats")
 ```
 
-You can install the development version of `{eunis.habitats}` like so:
-
-``` r
-# install.packages("remotes")
-remotes::install_github("ramiromagno/eunis.habitats")
-```
-
 ## EUNIS classifications
 
 There are four EUNIS classifications included in the one single data set

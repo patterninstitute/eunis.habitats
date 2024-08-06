@@ -11,25 +11,22 @@ The EUNIS habitat classification is a comprehensive pan-European system for habi
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ramiromagno/eunis.habitats}
-  \item \url{https://rmagno.eu/eunis.habitats/}
-  \item Report bugs at \url{https://github.com/ramiromagno/eunis.habitats/issues}
+  \item \url{https://github.com/patterninstitute/eunis.habitats}
+  \item \url{https://www.pattern.institute/eunis.habitats/}
+  \item \url{http://www.pattern.institute/eunis.habitats/}
+  \item Report bugs at \url{https://github.com/patterninstitute/eunis.habitats/issues}
 }
 
 }
 \author{
 \strong{Maintainer}: Ramiro Magno \email{rmagno@pattern.institute} (\href{https://orcid.org/0000-0001-5226-3441}{ORCID})
 
-Authors:
-\itemize{
-  \item Pedro Monteiro \email{pmontei@ualg.pt} (\href{https://orcid.org/0000-0003-1446-8256}{ORCID})
-  \item Luís Bentes \email{lbentes@ualg.pt} (\href{https://orcid.org/0000-0001-6884-2886}{ORCID})
-}
-
 Other contributors:
 \itemize{
+  \item Pedro Monteiro \email{pmontei@ualg.pt} (\href{https://orcid.org/0000-0003-1446-8256}{ORCID}) [contributor]
+  \item Luís Bentes \email{lbentes@ualg.pt} (\href{https://orcid.org/0000-0001-6884-2886}{ORCID}) [contributor]
   \item Pattern Institute [copyright holder, funder]
-  \item CCMAR [copyright holder, funder]
+  \item CCMAR [funder]
 }
 
 }

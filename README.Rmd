@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 library(eunis.habitats)
 ```
 
-# eunis.habitats <a href="https://rmagno.eu/eunis.habitats/"><img src="man/figures/logo.svg" align="right" height="139" /></a>
+# eunis.habitats <a href="https://www.pattern.institute/eunis.habitats/"><img src="man/figures/logo.svg" align="right" height="139" /></a>
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/eunis.habitats)](https://CRAN.R-project.org/package=eunis.habitats)
@@ -29,13 +29,6 @@ Install from CRAN:
 
 ``` r
 install.packages("eunis.habitats")
-```
-
-You can install the development version of `{eunis.habitats}` like so:
-
-``` r
-# install.packages("remotes")
-remotes::install_github("ramiromagno/eunis.habitats")
 ```
 
 ## EUNIS classifications
