@@ -12,9 +12,6 @@ status](https://www.r-pkg.org/badges/version/eunis.habitats)](https://CRAN.R-pro
 `{eunis.habitats}` is an R data package that provides the EUNIS habitat
 classification in tidy format.
 
-Use the helper `crosswalk()` to map habitat codes across classification
-systems.
-
 ## Installation
 
 Install from CRAN:
@@ -32,8 +29,12 @@ The data set `eunis_habitats` provides the four EUNIS classifications:
 3.  EUNIS marine classification from 2022
 4.  EUNIS terrestrial classification from 2021
 
-See `vignette("eunis-classification")` to learn more. In addition, we
-also provide a helper for converting habitat codes across:
+See `vignette("eunis-classification")` to learn more.
+
+## Crosswalks
+
+Use the helper `crosswalk()` to map habitat codes across classification
+systems:
 
 - EUNIS habitat classifications
 - European Red List of Habitats
