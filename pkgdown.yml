@@ -1,0 +1,8 @@
+pandoc: 3.1.11
+pkgdown: 2.1.0
+pkgdown_sha: ~
+articles: {}
+last_built: 2024-08-06T11:08Z
+urls:
+  reference: https://rmagno.eu/eunis.habitats/reference
+  article: https://rmagno.eu/eunis.habitats/articles
