@@ -41,6 +41,8 @@
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
+<li class="nav-item"><a class="nav-link" href="articles/eunis-classification.html">EUNIS Classification</a></li>
+<li class="nav-item"><a class="nav-link" href="articles/crosswalks.html">Crosswalks</a></li>
 <li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
 <li class="nav-item"><a class="nav-link" href="news/index.html">Changelog</a></li>
       </ul>
@@ -64,7 +66,7 @@
 </div>
 <!-- badges: start -->
 
-<p><a href="https://github.com/patterninstitute/eunis.habitats" class="external-link">eunis.habitats</a> is an R data package that provides the <a href="https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1" class="external-link">EUNIS Habitat Classification</a> in tidy format.</p>
+<p><a href="https://github.com/patterninstitute/eunis.habitats" class="external-link">eunis.habitats</a> is an R data package that provides the EUNIS habitat classification in tidy format.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -75,107 +77,25 @@
 <div class="section level2">
 <h2 id="eunis-classifications">EUNIS classifications<a class="anchor" aria-label="anchor" href="#eunis-classifications"></a>
 </h2>
-<p>There are four EUNIS classifications included in the one single data set <code>eunis_habitats</code>, namely:</p>
+<p>The data set <code>eunis_habitats</code> provides the four EUNIS classifications:</p>
 <ol style="list-style-type: decimal">
 <li>EUNIS classification from 2007, revised in 2012.</li>
 <li>EUNIS marine classification from 2019</li>
 <li>EUNIS marine classification from 2022</li>
 <li>EUNIS terrestrial classification from 2021</li>
 </ol>
-<p>For example, to access the marine habitats classified according to EUNIS revision of 2022:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">eunis_habitats</span>, <span class="va">classification</span> <span class="op">==</span> <span class="st">"EUNIS_M_2022"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 1,942 × 8</span></span>
-<span><span class="co">#&gt;    classification section version group   level code    name         description</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;          &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;        &lt;chr&gt;      </span></span>
-<span><span class="co">#&gt;  1 EUNIS_M_2022   marine  2022    benthic     1 M       Marine bent… "Marine be…</span></span>
-<span><span class="co">#&gt;  2 EUNIS_M_2022   marine  2022    benthic     2 MA1     Littoral ro… "Littoral …</span></span>
-<span><span class="co">#&gt;  3 EUNIS_M_2022   marine  2022    benthic     3 MA11    Arctic litt… "Arctic li…</span></span>
-<span><span class="co">#&gt;  4 EUNIS_M_2022   marine  2022    benthic     3 MA12    Atlantic li… "Atlantic …</span></span>
-<span><span class="co">#&gt;  5 EUNIS_M_2022   marine  2022    benthic     4 MA121   Lichens or … "Lichen co…</span></span>
-<span><span class="co">#&gt;  6 EUNIS_M_2022   marine  2022    benthic     5 MA1211  Yellow and … "Vertical …</span></span>
-<span><span class="co">#&gt;  7 EUNIS_M_2022   marine  2022    benthic     5 MA1212  Prasiola st… "Exposed t…</span></span>
-<span><span class="co">#&gt;  8 EUNIS_M_2022   marine  2022    benthic     5 MA1213  Verrucaria … "Bedrock o…</span></span>
-<span><span class="co">#&gt;  9 EUNIS_M_2022   marine  2022    benthic     6 MA12131 Verrucaria … "The litto…</span></span>
-<span><span class="co">#&gt; 10 EUNIS_M_2022   marine  2022    benthic     6 MA12132 Verrucaria … "Upper lit…</span></span>
-<span><span class="co">#&gt; # ℹ 1,932 more rows</span></span></code></pre></div>
-<p>Check the documentation for more details: <code><a href="reference/eunis_habitats.html">?eunis_habitats</a></code>.</p>
+<p>See <code>vignette("eunis-classification")</code> to learn more.</p>
 </div>
 <div class="section level2">
-<h2 id="crosswalks-mapping-of-habitat-codes">Crosswalks (mapping of habitat codes)<a class="anchor" aria-label="anchor" href="#crosswalks-mapping-of-habitat-codes"></a>
+<h2 id="crosswalks">Crosswalks<a class="anchor" aria-label="anchor" href="#crosswalks"></a>
 </h2>
-<p>From EUNIS 2012 to EUNIS Marine 2022:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/crosswalk.html">crosswalk</a></span><span class="op">(</span></span>
-<span>  code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A3.4"</span>, <span class="st">"A3.5"</span><span class="op">)</span>,</span>
-<span>  from <span class="op">=</span> <span class="st">"EUNIS_2012"</span>,</span>
-<span>  to <span class="op">=</span> <span class="st">"EUNIS_M_2022"</span>,</span>
-<span>  unnest <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 64 × 2</span></span>
-<span><span class="co">#&gt;    eunis_2012_code eunis_m_2022_code</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;           &lt;chr&gt;            </span></span>
-<span><span class="co">#&gt;  1 A3.4            MA133            </span></span>
-<span><span class="co">#&gt;  2 A3.4            MA134            </span></span>
-<span><span class="co">#&gt;  3 A3.4            MA135            </span></span>
-<span><span class="co">#&gt;  4 A3.4            MA136            </span></span>
-<span><span class="co">#&gt;  5 A3.4            MA137            </span></span>
-<span><span class="co">#&gt;  6 A3.4            MB13             </span></span>
-<span><span class="co">#&gt;  7 A3.4            MB131            </span></span>
-<span><span class="co">#&gt;  8 A3.4            MB1311           </span></span>
-<span><span class="co">#&gt;  9 A3.4            MB1312           </span></span>
-<span><span class="co">#&gt; 10 A3.4            MB1313           </span></span>
-<span><span class="co">#&gt; # ℹ 54 more rows</span></span></code></pre></div>
-<p>From EUNIS Marine 2019 to EUNIS 2012:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/crosswalk.html">crosswalk</a></span><span class="op">(</span></span>
-<span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MH152"</span>, <span class="st">"MH2331"</span><span class="op">)</span>,</span>
-<span>from <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>,</span>
-<span>to <span class="op">=</span> <span class="st">"EUNIS_2012"</span>,</span>
-<span>unnest <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 2 × 2</span></span>
-<span><span class="co">#&gt;   eunis_m_2019_code eunis_2012_code</span></span>
-<span><span class="co">#&gt;   &lt;chr&gt;             &lt;chr&gt;          </span></span>
-<span><span class="co">#&gt; 1 MH152             A7.12          </span></span>
-<span><span class="co">#&gt; 2 MH2331            A7.231</span></span></code></pre></div>
-<p>From EUNIS Marine 2022 to the European Red List of Habitats:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/crosswalk.html">crosswalk</a></span><span class="op">(</span></span>
-<span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MH152"</span>, <span class="st">"MH2331"</span>, <span class="st">"MA146"</span>, <span class="st">"MD55"</span><span class="op">)</span>,</span>
-<span>from <span class="op">=</span> <span class="st">"EUNIS_M_2022"</span>,</span>
-<span>to <span class="op">=</span> <span class="st">"RL"</span>,</span>
-<span>unnest <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 4 × 2</span></span>
-<span><span class="co">#&gt;   eunis_m_2022_code rl_code</span></span>
-<span><span class="co">#&gt;   &lt;chr&gt;             &lt;chr&gt;  </span></span>
-<span><span class="co">#&gt; 1 MH152             &lt;NA&gt;   </span></span>
-<span><span class="co">#&gt; 2 MH2331            &lt;NA&gt;   </span></span>
-<span><span class="co">#&gt; 3 MA146             A1.1xx </span></span>
-<span><span class="co">#&gt; 4 MD55              A5.27</span></span></code></pre></div>
-<p>From EUNIS Marine 2019 to Habitats Directive Annex I:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/crosswalk.html">crosswalk</a></span><span class="op">(</span></span>
-<span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"M"</span>, <span class="st">"MA1"</span>, <span class="st">"MA11"</span>, <span class="st">"MA12"</span><span class="op">)</span>,</span>
-<span>from <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>,</span>
-<span>to <span class="op">=</span> <span class="st">"Annex_I"</span>, unnest <span class="op">=</span> <span class="cn">TRUE</span></span>
-<span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 7 × 2</span></span>
-<span><span class="co">#&gt;   eunis_m_2019_code annex_i_code</span></span>
-<span><span class="co">#&gt;   &lt;chr&gt;             &lt;chr&gt;       </span></span>
-<span><span class="co">#&gt; 1 M                 &lt;NA&gt;        </span></span>
-<span><span class="co">#&gt; 2 MA1               &lt;NA&gt;        </span></span>
-<span><span class="co">#&gt; 3 MA11              &lt;NA&gt;        </span></span>
-<span><span class="co">#&gt; 4 MA12              8330        </span></span>
-<span><span class="co">#&gt; 5 MA12              1160        </span></span>
-<span><span class="co">#&gt; 6 MA12              1170        </span></span>
-<span><span class="co">#&gt; 7 MA12              1130</span></span></code></pre></div>
-</div>
-<div class="section level2">
-<h2 id="original-data-source">Original data source<a class="anchor" aria-label="anchor" href="#original-data-source"></a>
-</h2>
-<p>The original data is by <a href="https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1" class="external-link">EUNIS Habitat Classification</a>.</p>
+<p>Use the helper <code><a href="reference/crosswalk.html">crosswalk()</a></code> to map habitat codes across classification systems:</p>
+<ul>
+<li>EUNIS habitat classifications</li>
+<li>European Red List of Habitats</li>
+<li>Habitats Directive Annex I</li>
+</ul>
+<p>See <code>vignette("crosswalks")</code> for more details.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -184,6 +104,7 @@
 <li><a href="https://cloud.r-project.org/package=eunis.habitats" class="external-link">View on CRAN</a></li>
 <li><a href="https://github.com/patterninstitute/eunis.habitats/" class="external-link">Browse source code</a></li>
 <li><a href="https://github.com/patterninstitute/eunis.habitats/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1/" class="external-link">EUNIS habitat classification</a></li>
 </ul>
 </div>
 
@@ -226,6 +147,7 @@
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://CRAN.R-project.org/package=eunis.habitats" class="external-link"><img src="https://www.r-pkg.org/badges/version/eunis.habitats" alt="CRAN status"></a></li>
+<li><a href="https://github.com/patterninstitute/eunis.habitats/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/patterninstitute/eunis.habitats/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 
