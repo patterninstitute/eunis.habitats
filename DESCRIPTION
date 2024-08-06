@@ -11,8 +11,7 @@ Authors@R: c(
     role = "ctb", comment = c(ORCID = "0000-0001-6884-2886")),
     person("Pattern Institute",
     role = c("cph", "fnd")),
-    person("CCMAR",
-    role = "fnd")
+    person("CCMAR", role = "fnd")
     )
 Description: The EUNIS habitat classification is a comprehensive pan-European
     system for habitat identification
@@ -32,5 +31,5 @@ Depends:
 Roxygen: list(markdown = TRUE)
 URL: https://github.com/patterninstitute/eunis.habitats, https://www.pattern.institute/eunis.habitats/, http://www.pattern.institute/eunis.habitats/
 BugReports: https://github.com/patterninstitute/eunis.habitats/issues
-Config/Needs/website: patterninstitute/chic
+Config/Needs/website: patterninstitute/chic, rmarkdown
 License: CC0

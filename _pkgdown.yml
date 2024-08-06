@@ -6,6 +6,9 @@ template:
 home:
   title: EUNIS Habitat Classification
   description: EUNIS Habitats and crosswalks
+  links:
+  - text: EUNIS habitat classification
+    href: https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1/
 
 authors:
   Ramiro Magno:
@@ -29,3 +32,15 @@ reference:
   desc: "Convert habitat codes across EUNIS, European Red List and Habitats Directive Annex I"
   contents:
   - crosswalk
+
+navbar:
+  structure:
+    left:  [eunis, crosswalks, reference, news]
+    right: [search, github]
+  components:
+    eunis:
+      text: EUNIS Classification
+      href: articles/eunis-classification.html
+    crosswalks:
+      text: Crosswalks
+      href: articles/crosswalks.html

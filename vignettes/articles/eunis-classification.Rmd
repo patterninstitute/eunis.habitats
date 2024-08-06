@@ -1,0 +1,52 @@
+---
+title: "EUNIS Classification Systems"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(eunis.habitats)
+library(dplyr)
+```
+
+EUNIS habitats are provided as the tidy data set `eunis_habitats`, each row
+corresponding to a habitat at varying levels of description.
+
+```{r}
+eunis_habitats
+```
+
+## EUNIS four classifications
+
+The `eunis_habitats` data set comprises four habitat classifications:
+
+1. EUNIS classification from 2007, revised in 2012.
+2. EUNIS marine classification from 2019.
+3. EUNIS marine classification from 2022.
+4. EUNIS terrestrial classification from 2021.
+
+The column `classification` distinguishes which is which:
+
+```{r}
+dplyr::distinct(eunis_habitats, classification)
+```
+
+For example, to access the level 1 marine habitats classified
+according to EUNIS revision of 2022 (`"EUNIS_M_2022"`):
+
+```{r}
+dplyr::filter(eunis_habitats, classification == "EUNIS_M_2022", level == 1L)
+```
+
+And to list ice habitats (level 2):
+
+```{r}
+dplyr::filter(eunis_habitats,
+              classification == "EUNIS_M_2022",
+              group == "ice",
+              level == 2L) |>
+  dplyr::select("code", "name")
+```
+

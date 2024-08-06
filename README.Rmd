@@ -20,8 +20,10 @@ library(eunis.habitats)
 [![CRAN status](https://www.r-pkg.org/badges/version/eunis.habitats)](https://CRAN.R-project.org/package=eunis.habitats)
 <!-- badges: end -->
 
-`{eunis.habitats}` is an R data package that provides the [EUNIS Habitat
-Classification](https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1) in tidy format.
+`{eunis.habitats}` is an R data package that provides the EUNIS habitat
+classification in tidy format.
+
+Use the helper `crosswalk()` to map habitat codes across classification systems.
 
 ## Installation
 
@@ -33,67 +35,19 @@ install.packages("eunis.habitats")
 
 ## EUNIS classifications
 
-There are four EUNIS classifications included in the one single data set `eunis_habitats`, namely:
+The data set `eunis_habitats` provides the four EUNIS classifications:
 
 1. EUNIS classification from 2007, revised in 2012.
 2. EUNIS marine classification from 2019
 3. EUNIS marine classification from 2022
 4. EUNIS terrestrial classification from 2021
 
-For example, to access the marine habitats classified according to EUNIS revision of 2022:
+See `vignette("eunis-classification")` to learn more. In addition, we also
+provide a helper for converting habitat codes across:
 
-```{r}
-subset(eunis_habitats, classification == "EUNIS_M_2022")
-```
+- EUNIS habitat classifications
+- European Red List of Habitats
+- Habitats Directive Annex I
 
-Check the documentation for more details: `?eunis_habitats`.
+See `vignette("crosswalks")` for more details.
 
-## Crosswalks (mapping of habitat codes)
-
-From EUNIS 2012 to EUNIS Marine 2022:
-
-```{r}
-crosswalk(
-  code = c("A3.4", "A3.5"),
-  from = "EUNIS_2012",
-  to = "EUNIS_M_2022",
-  unnest = TRUE
-)
-```
-
-From EUNIS Marine 2019 to EUNIS 2012:
-
-```{r}
-crosswalk(
-code = c("MH152", "MH2331"),
-from = "EUNIS_M_2019",
-to = "EUNIS_2012",
-unnest = TRUE
-)
-```
-
-From EUNIS Marine 2022 to the European Red List of Habitats:
-
-```{r}
-crosswalk(
-code = c("MH152", "MH2331", "MA146", "MD55"),
-from = "EUNIS_M_2022",
-to = "RL",
-unnest = TRUE
-)
-```
-
-From EUNIS Marine 2019 to Habitats Directive Annex I:
-
-```{r}
-crosswalk(
-code = c("M", "MA1", "MA11", "MA12"),
-from = "EUNIS_M_2019",
-to = "Annex_I", unnest = TRUE
-)
-```
-
-## Original data source
-
-The original data is by [EUNIS Habitat
-Classification](https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1).

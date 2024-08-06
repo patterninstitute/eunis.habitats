@@ -1,0 +1,74 @@
+---
+title: "Crosswalk of Habitat Codes"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(eunis.habitats)
+```
+
+The function `crosswalk()` provides an easy mapping from habitat codes in
+one classification system to another.
+
+### From EUNIS 2012 to EUNIS Marine 2022
+
+```{r}
+crosswalk(
+  code = c("A3.4", "A3.5"),
+  from = "EUNIS_2012",
+  to = "EUNIS_M_2022",
+  unnest = TRUE
+)
+```
+
+### From EUNIS Marine 2019 to EUNIS 2012
+
+```{r}
+crosswalk(
+  code = c("MH152", "MH2331"),
+  from = "EUNIS_M_2019",
+  to = "EUNIS_2012",
+  unnest = TRUE
+)
+```
+
+### From EUNIS Marine 2022 to the European Red List of Habitats
+
+```{r}
+crosswalk(
+  code = c("MH152", "MH2331", "MA146", "MD55"),
+  from = "EUNIS_M_2022",
+  to = "RL",
+  unnest = TRUE
+)
+```
+
+### One to many mappings
+
+Note that some mappings are one to many, e.g. `"MA12"` in EUNIS Marine 2019 maps
+to the following _Habitats Directive Annex I_ habitat codes: `"8330"`, `"1160"`,
+`"1170"` and `"1130"`. That is why, by default, the _to_ column is a
+list-column.
+
+```{r}
+crosswalk(
+  code = c("M", "MA1", "MA11", "MA12"),
+  from = "EUNIS_M_2019",
+  to = "Annex_I"
+)
+```
+
+You need to use `unnest = TRUE` to flatten out the table of mappings and
+convert the _to_ list-column to a character vector column.
+
+```{r}
+crosswalk(
+  code = c("M", "MA1", "MA11", "MA12"),
+  from = "EUNIS_M_2019",
+  to = "Annex_I",
+  unnest = TRUE
+)
+```
