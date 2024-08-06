@@ -6,20 +6,29 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>EUNIS Habitat Classification • eunis.habitats</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/Nunito-0.4.9/font.css" rel="stylesheet">
+<link href="deps/Inconsolata-0.4.9/font.css" rel="stylesheet">
+<link href="deps/Source_Sans_Pro-0.4.9/font.css" rel="stylesheet">
+<link href="deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="EUNIS Habitat Classification">
 <meta name="description" content="EUNIS Habitats and crosswalks">
 <meta property="og:description" content="EUNIS Habitats and crosswalks">
-<meta property="og:image" content="https://rmagno.eu/eunis.habitats/logo.svg">
+<meta property="og:image" content="https://www.pattern.institute/eunis.habitats/logo.svg">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-none" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
     <a class="navbar-brand me-2" href="index.html">eunis.habitats</a>
 
@@ -39,7 +48,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="search.json">
 </form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/ramiromagno/eunis.habitats/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/patterninstitute/eunis.habitats/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -55,17 +64,13 @@
 </div>
 <!-- badges: start -->
 
-<p><a href="https://github.com/ramiromagno/eunis.habitats" class="external-link">eunis.habitats</a> is an R data package that provides the <a href="https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1" class="external-link">EUNIS Habitat Classification</a> in tidy format.</p>
+<p><a href="https://github.com/patterninstitute/eunis.habitats" class="external-link">eunis.habitats</a> is an R data package that provides the <a href="https://www.eea.europa.eu/data-and-maps/data/eunis-habitat-classification-1" class="external-link">EUNIS Habitat Classification</a> in tidy format.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>Install from CRAN:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"eunis.habitats"</span><span class="op">)</span></span></code></pre></div>
-<p>You can install the development version of <a href="https://github.com/ramiromagno/eunis.habitats" class="external-link">eunis.habitats</a> like so:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"ramiromagno/eunis.habitats"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="eunis-classifications">EUNIS classifications<a class="anchor" aria-label="anchor" href="#eunis-classifications"></a>
@@ -78,7 +83,7 @@
 <li>EUNIS terrestrial classification from 2021</li>
 </ol>
 <p>For example, to access the marine habitats classified according to EUNIS revision of 2022:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">eunis_habitats</span>, <span class="va">classification</span> <span class="op">==</span> <span class="st">"EUNIS_M_2022"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; # A tibble: 1,942 × 8</span></span>
 <span><span class="co">#&gt;    classification section version group   level code    name         description</span></span>
@@ -100,7 +105,7 @@
 <h2 id="crosswalks-mapping-of-habitat-codes">Crosswalks (mapping of habitat codes)<a class="anchor" aria-label="anchor" href="#crosswalks-mapping-of-habitat-codes"></a>
 </h2>
 <p>From EUNIS 2012 to EUNIS Marine 2022:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/crosswalk.html">crosswalk</a></span><span class="op">(</span></span>
 <span>  code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A3.4"</span>, <span class="st">"A3.5"</span><span class="op">)</span>,</span>
 <span>  from <span class="op">=</span> <span class="st">"EUNIS_2012"</span>,</span>
@@ -122,7 +127,7 @@
 <span><span class="co">#&gt; 10 A3.4            MB1313           </span></span>
 <span><span class="co">#&gt; # ℹ 54 more rows</span></span></code></pre></div>
 <p>From EUNIS Marine 2019 to EUNIS 2012:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/crosswalk.html">crosswalk</a></span><span class="op">(</span></span>
 <span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MH152"</span>, <span class="st">"MH2331"</span><span class="op">)</span>,</span>
 <span>from <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>,</span>
@@ -135,7 +140,7 @@
 <span><span class="co">#&gt; 1 MH152             A7.12          </span></span>
 <span><span class="co">#&gt; 2 MH2331            A7.231</span></span></code></pre></div>
 <p>From EUNIS Marine 2022 to the European Red List of Habitats:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/crosswalk.html">crosswalk</a></span><span class="op">(</span></span>
 <span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MH152"</span>, <span class="st">"MH2331"</span>, <span class="st">"MA146"</span>, <span class="st">"MD55"</span><span class="op">)</span>,</span>
 <span>from <span class="op">=</span> <span class="st">"EUNIS_M_2022"</span>,</span>
@@ -150,7 +155,7 @@
 <span><span class="co">#&gt; 3 MA146             A1.1xx </span></span>
 <span><span class="co">#&gt; 4 MD55              A5.27</span></span></code></pre></div>
 <p>From EUNIS Marine 2019 to Habitats Directive Annex I:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/crosswalk.html">crosswalk</a></span><span class="op">(</span></span>
 <span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"M"</span>, <span class="st">"MA1"</span>, <span class="st">"MA11"</span>, <span class="st">"MA12"</span><span class="op">)</span>,</span>
 <span>from <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>,</span>
@@ -177,8 +182,8 @@
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
 <li><a href="https://cloud.r-project.org/package=eunis.habitats" class="external-link">View on CRAN</a></li>
-<li><a href="https://github.com/ramiromagno/eunis.habitats/" class="external-link">Browse source code</a></li>
-<li><a href="https://github.com/ramiromagno/eunis.habitats/issues" class="external-link">Report a bug</a></li>
+<li><a href="https://github.com/patterninstitute/eunis.habitats/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/patterninstitute/eunis.habitats/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
 
@@ -190,6 +195,12 @@
 </ul>
 </div>
 
+<div class="community">
+<h2 data-toc-skip>Community</h2>
+<ul class="list-unstyled">
+<li><a href="SUPPORT.html">Getting help</a></li>
+</ul>
+</div>
 
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
@@ -202,15 +213,12 @@
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://rmagno.eu/" class="external-link">Ramiro Magno</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-5226-3441" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<a href="https://www.pattern.institute/team/rmagno" class="external-link">Ramiro Magno</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-5226-3441" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>
-<a href="https://www.ccmar.ualg.pt/users/pmontei" class="external-link">Pedro Monteiro</a> <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0003-1446-8256" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<a href="https://www.pattern.institute/" class="external-link">Pattern Institute</a> <br><small class="roles"> Copyright holder, funder </small>  </li>
 <li>
-<a href="https://www.ccmar.ualg.pt/users/lbentes" class="external-link">Luís Bentes</a> <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-6884-2886" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
-<li>
-<a href="https://www.pattern.institute/" class="external-link"><img src="https://rmagno.eu/eunis.habitats/reference/figures/pi-logotype-canonical-whole-v01.svg" height="24"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
-<li>
-<a href="https://www.ccmar.ualg.pt/" class="external-link"><img src="https://rmagno.eu/eunis.habitats/reference/figures/ccmar-logotype.svg" height="24"></a> <br><small class="roles"> Copyright holder, funder </small>  </li>
+<a href="https://www.ccmar.ualg.pt/" class="external-link"><img src="https://www.pattern.institute/eunis.habitats/reference/figures/ccmar-logotype.svg" height="24" alt="ccmar"></a> <br><small class="roles"> Funder </small>  </li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
 
@@ -226,11 +234,11 @@
 
 
     <footer><div class="pkgdown-footer-left">
-  <p>Developed by <a href="https://rmagno.eu/" class="external-link">Ramiro Magno</a>, <a href="https://www.ccmar.ualg.pt/users/pmontei" class="external-link">Pedro Monteiro</a>, <a href="https://www.ccmar.ualg.pt/users/lbentes" class="external-link">Luís Bentes</a>, <a href="https://www.pattern.institute/" class="external-link"><img src="https://rmagno.eu/eunis.habitats/reference/figures/pi-logotype-canonical-whole-v01.svg" height="24"></a>, <a href="https://www.ccmar.ualg.pt/" class="external-link"><img src="https://rmagno.eu/eunis.habitats/reference/figures/ccmar-logotype.svg" height="24"></a>.</p>
+  <p>Developed by <a href="https://www.pattern.institute/team/rmagno" class="external-link">Ramiro Magno</a>, <a href="https://www.pattern.institute/" class="external-link">Pattern Institute</a>, <a href="https://www.ccmar.ualg.pt/" class="external-link"><img src="https://www.pattern.institute/eunis.habitats/reference/figures/ccmar-logotype.svg" height="24" alt="ccmar"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
+
 </div>
 
     </footer>
