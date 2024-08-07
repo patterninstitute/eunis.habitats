@@ -123,10 +123,10 @@ specific crosswalk queried, see Examples.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># From EUNIS Marine 2019 to EUNIS 2012</span></span></span>
 <span class="r-in"><span><span class="fu">crosswalk</span><span class="op">(</span></span></span>
-<span class="r-in"><span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MH152"</span>, <span class="st">"MH2331"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>from <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>,</span></span>
-<span class="r-in"><span>to <span class="op">=</span> <span class="st">"EUNIS_2012"</span>,</span></span>
-<span class="r-in"><span>unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span>  code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MH152"</span>, <span class="st">"MH2331"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  from <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>,</span></span>
+<span class="r-in"><span>  to <span class="op">=</span> <span class="st">"EUNIS_2012"</span>,</span></span>
+<span class="r-in"><span>  unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 2 × 2</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   eunis_m_2019_code eunis_2012_code</span>
@@ -136,10 +136,10 @@ specific crosswalk queried, see Examples.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># From EUNIS Marine 2022 to Red List</span></span></span>
 <span class="r-in"><span><span class="fu">crosswalk</span><span class="op">(</span></span></span>
-<span class="r-in"><span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MH152"</span>, <span class="st">"MH2331"</span>, <span class="st">"MA146"</span>, <span class="st">"MD55"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>from <span class="op">=</span> <span class="st">"EUNIS_M_2022"</span>,</span></span>
-<span class="r-in"><span>to <span class="op">=</span> <span class="st">"RL"</span>,</span></span>
-<span class="r-in"><span>unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span>  code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"MH152"</span>, <span class="st">"MH2331"</span>, <span class="st">"MA146"</span>, <span class="st">"MD55"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  from <span class="op">=</span> <span class="st">"EUNIS_M_2022"</span>,</span></span>
+<span class="r-in"><span>  to <span class="op">=</span> <span class="st">"RL"</span>,</span></span>
+<span class="r-in"><span>  unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 4 × 2</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   eunis_m_2022_code rl_code</span>
@@ -151,9 +151,9 @@ specific crosswalk queried, see Examples.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># From EUNIS Marine 2019 to Annex I</span></span></span>
 <span class="r-in"><span><span class="fu">crosswalk</span><span class="op">(</span></span></span>
-<span class="r-in"><span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"M"</span>, <span class="st">"MA1"</span>, <span class="st">"MA11"</span>, <span class="st">"MA12"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>from <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>,</span></span>
-<span class="r-in"><span>to <span class="op">=</span> <span class="st">"Annex_I"</span>, unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span>  code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"M"</span>, <span class="st">"MA1"</span>, <span class="st">"MA11"</span>, <span class="st">"MA12"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  from <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>,</span></span>
+<span class="r-in"><span>  to <span class="op">=</span> <span class="st">"Annex_I"</span>, unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 7 × 2</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   eunis_m_2019_code annex_i_code</span>
@@ -168,9 +168,9 @@ specific crosswalk queried, see Examples.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># From Annex I to EUNIS Marine 2019</span></span></span>
 <span class="r-in"><span><span class="fu">crosswalk</span><span class="op">(</span></span></span>
-<span class="r-in"><span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"8330"</span>, <span class="st">"1160"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>from <span class="op">=</span> <span class="st">"Annex_I"</span>,</span></span>
-<span class="r-in"><span>to <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>, unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span>  code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"8330"</span>, <span class="st">"1160"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  from <span class="op">=</span> <span class="st">"Annex_I"</span>,</span></span>
+<span class="r-in"><span>  to <span class="op">=</span> <span class="st">"EUNIS_M_2019"</span>, unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 966 × 2</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    annex_i_code eunis_m_2019_code</span>
@@ -189,9 +189,9 @@ specific crosswalk queried, see Examples.</p>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># From EUNIS Terrestrial 2021 to Annex I</span></span></span>
 <span class="r-in"><span><span class="fu">crosswalk</span><span class="op">(</span></span></span>
-<span class="r-in"><span>code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"U51"</span>, <span class="st">"U72"</span>, <span class="st">"Q25"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>from <span class="op">=</span> <span class="st">"EUNIS_T_2021"</span>,</span></span>
-<span class="r-in"><span>to <span class="op">=</span> <span class="st">"Annex_I"</span>, unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span>  code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"U51"</span>, <span class="st">"U72"</span>, <span class="st">"Q25"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  from <span class="op">=</span> <span class="st">"EUNIS_T_2021"</span>,</span></span>
+<span class="r-in"><span>  to <span class="op">=</span> <span class="st">"Annex_I"</span>, unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 2</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   eunis_t_2021_code annex_i_code</span>
@@ -208,7 +208,7 @@ specific crosswalk queried, see Examples.</p>
 <span class="r-in"><span>  code <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"91E0"</span>, <span class="st">"92A0"</span>, <span class="st">"9030"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  from <span class="op">=</span> <span class="st">"Annex_I"</span>,</span></span>
 <span class="r-in"><span>  to <span class="op">=</span> <span class="st">"EUNIS_T_2021"</span>, unnest <span class="op">=</span> <span class="cn">TRUE</span></span></span>
-<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 2</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   annex_i_code eunis_t_2021_code</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            </span>
