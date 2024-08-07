@@ -38,39 +38,39 @@
 #'
 #' # From EUNIS Marine 2019 to EUNIS 2012
 #' crosswalk(
-#' code = c("MH152", "MH2331"),
-#' from = "EUNIS_M_2019",
-#' to = "EUNIS_2012",
-#' unnest = TRUE
+#'   code = c("MH152", "MH2331"),
+#'   from = "EUNIS_M_2019",
+#'   to = "EUNIS_2012",
+#'   unnest = TRUE
 #' )
 #'
 #' # From EUNIS Marine 2022 to Red List
 #' crosswalk(
-#' code = c("MH152", "MH2331", "MA146", "MD55"),
-#' from = "EUNIS_M_2022",
-#' to = "RL",
-#' unnest = TRUE
+#'   code = c("MH152", "MH2331", "MA146", "MD55"),
+#'   from = "EUNIS_M_2022",
+#'   to = "RL",
+#'   unnest = TRUE
 #' )
 #'
 #' # From EUNIS Marine 2019 to Annex I
 #' crosswalk(
-#' code = c("M", "MA1", "MA11", "MA12"),
-#' from = "EUNIS_M_2019",
-#' to = "Annex_I", unnest = TRUE
+#'   code = c("M", "MA1", "MA11", "MA12"),
+#'   from = "EUNIS_M_2019",
+#'   to = "Annex_I", unnest = TRUE
 #' )
 #'
 #' # From Annex I to EUNIS Marine 2019
 #' crosswalk(
-#' code = c("8330", "1160"),
-#' from = "Annex_I",
-#' to = "EUNIS_M_2019", unnest = TRUE
+#'   code = c("8330", "1160"),
+#'   from = "Annex_I",
+#'   to = "EUNIS_M_2019", unnest = TRUE
 #' )
 #'
 #' # From EUNIS Terrestrial 2021 to Annex I
 #' crosswalk(
-#' code = c("U51", "U72", "Q25"),
-#' from = "EUNIS_T_2021",
-#' to = "Annex_I", unnest = TRUE
+#'   code = c("U51", "U72", "Q25"),
+#'   from = "EUNIS_T_2021",
+#'   to = "Annex_I", unnest = TRUE
 #' )
 #'
 #' # From Annex I to EUNIS Terrestrial 2021
@@ -78,7 +78,7 @@
 #'   code = c("91E0", "92A0", "9030"),
 #'   from = "Annex_I",
 #'   to = "EUNIS_T_2021", unnest = TRUE
-#'   )
+#' )
 #'
 #' @export
 crosswalk <-
